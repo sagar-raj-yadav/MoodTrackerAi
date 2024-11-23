@@ -1,3 +1,6 @@
+![MoodTracker and 2 more pages - Personal - Microsoft​ Edge 23-11-2024 17_37_21 png 23-11-2024 17_37_54](https://github.com/user-attachments/assets/f31f227c-d8c7-4f1f-86f8-12974c1b40b2)
+
+
 # Mood Tracker with AI Insights
 
 ## Overview
