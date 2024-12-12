@@ -36,7 +36,14 @@ app.post('/mood', async (req, res) => {
 
     const aiInsight = response.data.choices[0].message.content;
     res.send({ aiInsight });
-  }
+  } catch (error) {
+    if (error.response && error.response.status === 429) {
+      console.error('Rate limit exceeded.');
+      return res.status(429).send({
+        error: 'Rate limit exceeded. Please try again after some time.',
+      });
+    }
+
     console.error(error);
     res.status(500).send({ error: 'Failed to fetch AI insights.' });
   }
