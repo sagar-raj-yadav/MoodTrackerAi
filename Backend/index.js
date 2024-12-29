@@ -15,14 +15,7 @@ app.use(bodyParser.json());
 app.post('/mood', async (req, res) => {
   const { mood, description } = req.body;
 
-  if (!mood || !description) {
-    return res.status(400).send({ error: 'Mood and description are required.' });
-  }
-
-  const prompt = `
-    The user rated their mood as ${mood}/5 and described it as: "${description}".
-    Provide insights to help them understand their feelings better and offer tips for improvement.
-  `;
+  
 
   try {
     const response = await axios.post(
